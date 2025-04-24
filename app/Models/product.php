@@ -14,17 +14,17 @@ class product extends Model
         'brand_id',
         'name',
         'slug',
-        'images',
+        'image',
         'description',
         'price',
-        'is_active',
-        'is_featured',
         'in_stock',
+        'is_active',
+        'is_feature',
         'on_sale'
     ];
 
     protected $casts = [
-        'images' => 'array'
+        'image' => 'array'
     ];
 
     public function category()

@@ -19,10 +19,10 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->json('image')->nullable();
             $table->longtext('description')->nullable();
-            $table->decimal('price', 10, 2);
+            $table->decimal('price', 50, 2);
             $table->boolean('is_active')->default(true);
             $table->boolean('is_feature')->default(false);
-            $table->boolean('is_stock')->default(true);
+            $table->boolean('in_stock')->default(true);
             $table->boolean('on_sale')->default(false);
             $table->timestamps();
         });
