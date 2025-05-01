@@ -69,7 +69,10 @@ class ProductResource extends Resource
                                     ->multiple()
                                     ->directory('products')
                                     ->maxFiles(5)
+
+
                                     ->reorderable(),
+
                             ]),
                     ])
                     ->columnSpan(1),
@@ -121,7 +124,6 @@ class ProductResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('category.name')
                     ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('brand.name')
                     ->searchable(),
                 tables\Columns\TextColumn::make('price')
@@ -138,11 +140,11 @@ class ProductResource extends Resource
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: false),
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: false),
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 SelectFilter::make('category')
